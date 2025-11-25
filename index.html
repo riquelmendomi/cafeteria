@@ -50,10 +50,9 @@
 		  }
 
 /* ----------- MENU CARDS ----------- */
-	  
 .menu-card {
   background: #FFFFFF;
-  height: 420px;           
+  height: 420px;
   padding: 25px;
   text-align: center;
   border: 1px solid #e4e4e4;
@@ -62,25 +61,23 @@
   flex-direction: column;
 }
 
-/* imagen placeholder */
-.placeholder-img {
+.menu-img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-color: #ddd;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  flex-shrink: 0; /* NO permite que Bootstrap lo aplaste */
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  flex-shrink: 0;
 }
 
+
 .menu-title {
-  min-height: 45px;      /* lineas de título parecidas */
+  min-height: 45px;
   font-weight: 600;
 }
 
 .menu-desc {
-  min-height: 150px;     /* TODO el texto ocupa lo mismo */
+  min-height: 150px;
   color: #6c6c6c;
   font-size: 0.92rem;
 }
@@ -92,26 +89,42 @@
   margin-top: auto;
 }
 
-/* carrusel con altura fija también */
-.carousel-item {
-  min-height: 420px;   /* igual que la card */
-}
 	  
-.gallery-col img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 1.2rem;
-  border-radius: 0;
+	  
+	  
+	/* ----------- GALE ----------- */
+	  .gallery-col img {
+		  width: 100%;
+		  height: auto;
+		  display: block;
+		  margin-bottom: 1.2rem;
+		  border-radius: 0;
+	  }
+	 
+	  /* Fix scroll horizontal en móvil */
+html, body {
+  overflow-x: hidden !important;
 }
+
+/* Evitar que la galería y las cards generen desbordes */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Asegura que nada se pase del ancho */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 
   </style>
-
 </head>
 
 <body>
 	
-<header>
+<header>	
 	
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -146,11 +159,11 @@
       <a href="#contacto" class="btn btn-light btn-lg rounded-0">Reservar</a>
     </div>
 </div>
-
+	
 </header>
 	
 <main class="mt-5 pt-4">
-
+	
 <!-- NOSOTROS -->
 <section id="nosotros" class="py-5 bg-white mb-4">
   <div class="container">
@@ -193,146 +206,65 @@
       y una dedicación que se nota en cada detalle.
     </p>
 
-    <div class="d-flex align-items-center justify-content-between">
+    <!-- GRID NORMAL SIN CARRUSEL -->
+    <div class="row justify-content-center align-items-stretch">
 
-      <!-- FLECHA IZQUIERDA -->
-      <button class="carousel-control-prev position-static" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
-      </button>
-
-      <!-- CARRUSEL -->
-      <div id="menuCarousel" class="carousel slide">
-        <div class="carousel-inner">
-
-
-          <!-- SLIDE 1 -->
-          <div class="carousel-item active">
-            <div class="row justify-content-center align-items-stretch">
-
-              <!-- CARD 1 -->
-              <div class="col-12 col-md-3 d-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Croissant Artesanal</h5>
-                  <p class="menu-desc">
-                    Hojaldre crujiente elaborado con mantequilla pura y horneado a diario,
-                    ofreciendo un equilibrio suave entre textura aireada y sabor delicadamente tostado.
-                  </p>
-                  <p class="menu-price mt-auto">$2.990</p>
-                </div>
-              </div>
-
-              <!-- CARD 2 -->
-              <div class="col-12 col-md-3 d-none d-md-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Desayuno Aroma</h5>
-                  <p class="menu-desc">
-                    Una combinación equilibrada de preparaciones frescas y café de especialidad,
-                    ideal para comenzar el día con energía y calidez.
-                  </p>
-                  <p class="menu-price mt-auto">$7.990</p>
-                </div>
-              </div>
-
-              <!-- CARD 3 -->
-              <div class="col-12 col-md-3 d-none d-md-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Latte Vainilla Cremoso</h5>
-                  <p class="menu-desc">
-                    Café espresso suavizado con leche vaporizada y un toque natural de vainilla,
-                    creando una textura dulce y aromática perfecta para disfrutar con calma.
-                  </p>
-                  <p class="menu-price mt-auto">$6.500</p>
-                </div>
-              </div>
-
-              <!-- CARD 4 -->
-              <div class="col-12 col-md-3 d-none d-md-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Cheesecake de Frutos Rojos</h5>
-                  <p class="menu-desc">
-                    Postre fresco con base suave y cobertura de frutos rojos ligeramente ácidos,
-                    logrando un contraste equilibrado de dulzor y una presentación delicada.
-                  </p>
-                  <p class="menu-price mt-auto">$7.200</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-
-           <!-- SLIDE 2 -->
-          <div class="carousel-item active">
-            <div class="row justify-content-center align-items-stretch">
-
-              <!-- CARD 1 -->
-              <div class="col-12 col-md-3 d-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Latte de la Casa</h5>
-                  <p class="menu-desc">
-                    Espresso suave combinado con leche vaporizada y espuma ligera, logrando un sabor cálido, cremoso y equilibrado para cualquier momento del día.
-                  </p>
-                  <p class="menu-price mt-auto">$3.990</p>
-                </div>
-              </div>
-
-              <!-- CARD 2 -->
-              <div class="col-12 col-md-3 d-none d-md-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Tarta de Frutos Rojos</h5>
-                  <p class="menu-desc">
-                    Base suave acompañada de una mezcla dulce y ligeramente ácida de frutos rojos, creando un postre vibrante tanto en sabor como en presentación.
-                  </p>
-                  <p class="menu-price mt-auto">$4.500</p>
-                </div>
-              </div>
-
-              <!-- CARD 3 -->
-              <div class="col-12 col-md-3 d-none d-md-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Muffin de Vainilla</h5>
-                  <p class="menu-desc">
-                    Su textura esponjosa y su aroma a vainilla natural lo convierten en una opción suave, dulce y perfecta para acompañar cualquier café.
-                  </p>
-                  <p class="menu-price mt-auto">1.800</p>
-                </div>
-              </div>
-
-              <!-- CARD 4 -->
-              <div class="col-12 col-md-3 d-none d-md-flex">
-                <div class="menu-card w-100">
-                  <div class="placeholder-img"></div>
-                  <h5 class="menu-title">Café Americano</h5>
-                  <p class="menu-desc">
-                    Preparado con granos recién molidos, su sabor limpio y persistente lo convierte en el acompañamiento perfecto para una pausa relajante.
-                  </p>
-                  <p class="menu-price mt-auto">$2.200</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+      <!-- CARD 1 -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
+        <div class="menu-card w-100">
+			<img src="assets/img/pro4.jpg" class="menu-img" alt="Café Latte">          
+			<h5 class="menu-title">Café Latte</h5>
+          <p class="menu-desc">
+            Café espresso combinado con leche vaporizada, logrando una textura suave y equilibrada que resalta las notas naturales del grano.
+          </p>
+          <p class="menu-price mt-auto">$2.990</p>
         </div>
       </div>
 
-      <!-- FLECHA DERECHA -->
-      <button class="carousel-control-next position-static" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
-      </button>
+      <!-- CARD 2 -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
+        <div class="menu-card w-100">
+			<img src="assets/img/pro3.jpg" class="menu-img" alt="Muffin de Frutos Rojos">          
+          <h5 class="menu-title">Muffin de Frutos Rojos</h5>
+          <p class="menu-desc">
+           Masa tierna y suave con abundantes chips de chocolate que se funden durante el horneado, creando un bocado cálido y reconfortante.
+          </p>
+          <p class="menu-price mt-auto">$2.590</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
+        <div class="menu-card w-100">
+			<img src="assets/img/pro1.jpg" class="menu-img" alt="Croissant Artesanal">          
+			<h5 class="menu-title">Latte Vainilla Cremoso</h5>
+          <p class="menu-desc">
+            Café espresso suavizado con leche vaporizada y un toque natural de vainilla,
+            creando una textura dulce y aromática perfecta para disfrutar con calma.
+          </p>
+          <p class="menu-price mt-auto">$6.500</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
+        <div class="menu-card w-100">
+         <img src="assets/img/pro2.jpg" class="menu-img" alt="Croissant Artesanal">         
+          <h5 class="menu-title">Cheesecake de Frutos Rojos</h5>
+          <p class="menu-desc">
+            Postre fresco con base suave y cobertura de frutos rojos ligeramente ácidos,
+            logrando un contraste equilibrado de dulzor y una presentación delicada.
+          </p>
+          <p class="menu-price mt-auto">$7.200</p>
+        </div>
+      </div>
 
     </div>
-
   </div>
 </section>
 
-<!-- GALERÍA MINIMALISTA -->
+	
+<!-- GALERÍA -->
 <section id="galeria" class="py-5 bg-white">
   <div class="container">
 
@@ -454,12 +386,11 @@
   </div>
 </section>
 
-
 </main>
 
 <!-- FOOTER -->
 <footer class="bg-dark text-white text-center py-4">
-  <p class="mb-1">&copy; <span id="year"></span> Café Lavka</p>
+  <p class="mb-1">&copy; <span id="year"></span> Café Lavka - Todos los derechos reservados</p>
 
   <p class="d-flex justify-content-center align-items-center gap-3 mb-0">
     <a href="#" class="text-white fs-4">
@@ -499,5 +430,3 @@
 
 </body>
 </html>
-
-
