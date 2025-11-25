@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafetería Lavka</title>
+
+  <!-- BOOTSTRAP CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- BOOTSTRAP iconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- ESTILOS -->
+  <style>
+    /* ----------- HERO ----------- */
+    .hero {
+      background-image: url("assets/img/interior-shot-cafe-with-chairs-near-bar-with-wooden-tables.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 95vh;
+      position: relative;
+      color: #fff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+	  
+	/* ----------- nosotros ----------- */
+	.nosotros-img {
+		width: 100%;
+		height: 400px;
+		background-image: url("assets/img/barista-preparing-coffee-coffee-machine.jpg");
+		background-size: cover;
+		background-position: center;
+	  }
+	  
+	  section {
+			scroll-margin-top: 72px; /* ajusta a la altura real de tu nav */
+		  }
+
+/* ----------- MENU CARDS ----------- */
+	  
+.menu-card {
+  background: #FFFFFF;
+  height: 420px;           
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* imagen placeholder */
+.placeholder-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  flex-shrink: 0; /* NO permite que Bootstrap lo aplaste */
+}
+
+.menu-title {
+  min-height: 45px;      /* lineas de título parecidas */
+  font-weight: 600;
+}
+
+.menu-desc {
+  min-height: 150px;     /* TODO el texto ocupa lo mismo */
+  color: #6c6c6c;
+  font-size: 0.92rem;
+}
+
+/* precio siempre abajo */
+.menu-price {
+  font-weight: 700;
+  color: #7c4a2d;
+  margin-top: auto;
+}
+
+/* carrusel con altura fija también */
+.carousel-item {
+  min-height: 420px;   /* igual que la card */
+}
+	  
+.gallery-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1.2rem;
+  border-radius: 0;
+}
+
+  </style>
+
+</head>
+
+<body>
+	
+<header>
+	
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+
+    <!-- LOGO COMO IMAGEN -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block align-text-top" style="height: 45px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero d-flex align-items-center text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Cafetería & Pastelería</h1>
+      <p class="lead mb-4">Café de especialidad y pastelería todo el día en un ambiente único.</p>
+      <a href="#menu" class="btn btn-outline-light btn-lg me-2 rounded-0">Ver Menú</a>
+      <a href="#contacto" class="btn btn-light btn-lg rounded-0">Reservar</a>
+    </div>
+</div>
+
+</header>
+	
+<main class="mt-5 pt-4">
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="py-5 bg-white mb-4">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- TEXTO (2/3) -->
+      <div class="col-md-8">
+        <h2 class="fw-semibold mb-3">Sobre Nosotros</h2>
+
+        <p class="text-muted">
+          Bienvenidos a nuestra cafetería y pastelería, un espacio pensado para quienes disfrutan de los pequeños placeres del día. Somos un lugar donde el aroma del café recién molido se mezcla con el dulce perfume de nuestras preparaciones artesanales, creando una experiencia que reconforta y acompaña.
+          <br><br>
+          Somos un equipo apasionado por lo que hacemos: trabajamos cada mañana para ofrecer productos frescos, recetas cuidadas y un ambiente acogedor que invita a quedarse. Creemos en la calidez, en las pausas que te permiten respirar y en los sabores que evocan recuerdos.
+          <br><br>
+          Pasa, siéntate y disfruta. Este es un lugar para conversar, para inspirarte, para darte un gusto o simplemente para regalarte un momento contigo mismo. Gracias por elegirnos; estamos felices de recibirte.
+        </p>
+
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-dark fs-4"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- IMAGEN (1/3) -->
+      <div class="col-md-4">
+        <div class="nosotros-img rounded-0"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="py-5 bg-body-secondary">
+  <div class="container">
+
+    <h2 class="text-center fw-bold">Menú Destacado</h2>
+    <p class="text-center text-muted mb-5" style="max-width: 650px; margin: 0 auto;">
+      Una selección de nuestros productos elaborados diariamente con ingredientes frescos
+      y una dedicación que se nota en cada detalle.
+    </p>
+
+    <div class="d-flex align-items-center justify-content-between">
+
+      <!-- FLECHA IZQUIERDA -->
+      <button class="carousel-control-prev position-static" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+      </button>
+
+      <!-- CARRUSEL -->
+      <div id="menuCarousel" class="carousel slide">
+        <div class="carousel-inner">
+
+
+          <!-- SLIDE 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center align-items-stretch">
+
+              <!-- CARD 1 -->
+              <div class="col-12 col-md-3 d-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Croissant Artesanal</h5>
+                  <p class="menu-desc">
+                    Hojaldre crujiente elaborado con mantequilla pura y horneado a diario,
+                    ofreciendo un equilibrio suave entre textura aireada y sabor delicadamente tostado.
+                  </p>
+                  <p class="menu-price mt-auto">$2.990</p>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="col-12 col-md-3 d-none d-md-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Desayuno Aroma</h5>
+                  <p class="menu-desc">
+                    Una combinación equilibrada de preparaciones frescas y café de especialidad,
+                    ideal para comenzar el día con energía y calidez.
+                  </p>
+                  <p class="menu-price mt-auto">$7.990</p>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="col-12 col-md-3 d-none d-md-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Latte Vainilla Cremoso</h5>
+                  <p class="menu-desc">
+                    Café espresso suavizado con leche vaporizada y un toque natural de vainilla,
+                    creando una textura dulce y aromática perfecta para disfrutar con calma.
+                  </p>
+                  <p class="menu-price mt-auto">$6.500</p>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div class="col-12 col-md-3 d-none d-md-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Cheesecake de Frutos Rojos</h5>
+                  <p class="menu-desc">
+                    Postre fresco con base suave y cobertura de frutos rojos ligeramente ácidos,
+                    logrando un contraste equilibrado de dulzor y una presentación delicada.
+                  </p>
+                  <p class="menu-price mt-auto">$7.200</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+           <!-- SLIDE 2 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center align-items-stretch">
+
+              <!-- CARD 1 -->
+              <div class="col-12 col-md-3 d-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Latte de la Casa</h5>
+                  <p class="menu-desc">
+                    Espresso suave combinado con leche vaporizada y espuma ligera, logrando un sabor cálido, cremoso y equilibrado para cualquier momento del día.
+                  </p>
+                  <p class="menu-price mt-auto">$3.990</p>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="col-12 col-md-3 d-none d-md-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Tarta de Frutos Rojos</h5>
+                  <p class="menu-desc">
+                    Base suave acompañada de una mezcla dulce y ligeramente ácida de frutos rojos, creando un postre vibrante tanto en sabor como en presentación.
+                  </p>
+                  <p class="menu-price mt-auto">$4.500</p>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="col-12 col-md-3 d-none d-md-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Muffin de Vainilla</h5>
+                  <p class="menu-desc">
+                    Su textura esponjosa y su aroma a vainilla natural lo convierten en una opción suave, dulce y perfecta para acompañar cualquier café.
+                  </p>
+                  <p class="menu-price mt-auto">1.800</p>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div class="col-12 col-md-3 d-none d-md-flex">
+                <div class="menu-card w-100">
+                  <div class="placeholder-img"></div>
+                  <h5 class="menu-title">Café Americano</h5>
+                  <p class="menu-desc">
+                    Preparado con granos recién molidos, su sabor limpio y persistente lo convierte en el acompañamiento perfecto para una pausa relajante.
+                  </p>
+                  <p class="menu-price mt-auto">$2.200</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLECHA DERECHA -->
+      <button class="carousel-control-next position-static" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERÍA MINIMALISTA -->
+<section id="galeria" class="py-5 bg-white">
+  <div class="container">
+
+    <h2 class="text-center fw-bold mb-2">Nuestra Galería</h2>
+    <p class="text-center text-muted mb-5" style="max-width:600px; margin:0 auto;">
+      Momentos, detalles y texturas que representan lo que somos.
+    </p>
+
+    <!-- 4 COLUMNAS FIJAS -->
+    <div class="row g-4">
+
+      <!-- COLUMNA 1 -->
+      <div class="col-12 col-sm-6 col-lg-3 gallery-col">
+        <img src="assets/img/ima1.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima2.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima3.jpg" class="img-fluid gallery-img">
+      </div>
+
+      <!-- COLUMNA 2 -->
+      <div class="col-12 col-sm-6 col-lg-3 gallery-col">
+        <img src="assets/img/ima4.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima5.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima6.jpg" class="img-fluid gallery-img">
+      </div>
+
+      <!-- COLUMNA 3 -->
+      <div class="col-12 col-sm-6 col-lg-3 gallery-col">
+        <img src="assets/img/ima7.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima8.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima9.jpg" class="img-fluid gallery-img">
+      </div>
+
+      <!-- COLUMNA 4 -->
+      <div class="col-12 col-sm-6 col-lg-3 gallery-col">
+        <img src="assets/img/ima10.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima11.jpg" class="img-fluid gallery-img">
+        <img src="assets/img/ima12.jpg" class="img-fluid gallery-img">
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-outline-dark px-4 py-2 rounded-0">Ver más</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- FORMULARIO (2/3) -->
+      <div class="col-lg-8">
+        <h2 class="mb-3">Reserva o Contáctanos</h2>
+
+        <div id="formAlert" class="alert alert-danger d-none"></div>
+
+        <form id="reservaForm">
+
+          <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" id="email" class="form-control">
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Fecha</label>
+              <input type="date" id="fecha" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Personas</label>
+              <input type="number" id="personas" min="1" class="form-control">
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-100" type="submit">Enviar</button>
+
+        </form>
+      </div>
+
+      <!-- INFO (1/3) -->
+      <div class="col-lg-4">
+
+        <h3 class="fw-bold mb-4 text-center text-lg-start">Información</h3>
+
+        <div class="mb-4">
+          <h5 class="d-flex align-items-center gap-2">
+            <i class="bi bi-clock"></i> Horarios
+          </h5>
+          <p class="mb-1">Lunes a Viernes: 08:00 - 21:00</p>
+          <p>Sábados y Domingos: 09:00 - 22:00</p>
+        </div>
+
+        <div class="mb-4">
+          <h5 class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt"></i> Ubicación
+          </h5>
+          <p>Av. Nueva 1234, Los Ángeles</p>
+        </div>
+
+        <div>
+          <h5 class="d-flex align-items-center gap-2">
+            <i class="bi bi-telephone"></i> Contacto
+          </h5>
+          <p>+56 9 1234 5678</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1">&copy; <span id="year"></span> Café Aroma</p>
+    <p>Síguenos en Facebook · Instagram</p>
+  </footer>
+
+<!-- MODAL EXITO -->
+  <div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">¡Reserva Enviada!</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Hemos recibido tu solicitud. Pronto te contactaremos.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- BOOTSTRAP JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- JS EXTERNO -->
+	<script src="assets/js/index.js"></script>
+
+</body>
+</html>
+
+
